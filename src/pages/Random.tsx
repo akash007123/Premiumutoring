@@ -44,6 +44,10 @@ function Random() {
       link: "/faqSection",
       name:"Go"
     },
+    {
+      link: "/eventhandling",
+      name:"Event Handling"
+    },
   ];
 
   return (
