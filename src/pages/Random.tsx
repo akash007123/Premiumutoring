@@ -52,6 +52,10 @@ function Random() {
       link: "/usestate",
       name:"Usestate"
     },
+    {
+      link: "/useeffect",
+      name:"Use Effect"
+    },
   ];
 
   return (
