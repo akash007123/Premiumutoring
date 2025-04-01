@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GraduationCap, Menu, X} from 'lucide-react';
+import {  Menu, X} from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +11,7 @@ function App() {
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <GraduationCap className="h-8 w-8 text-blue-600" />
+              <img src="https://www.amplethemes.com/wp-content/uploads/edd/2020/07/5345488-icon-png-logos-208178-free-icons-library-png-logos-1000_979_preview.png" className='w-11' alt="" />
               <span className="ml-2 text-xl font-bold text-gray-800">Premium Tutoring</span>
             </div>
             
