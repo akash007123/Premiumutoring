@@ -66,6 +66,31 @@ function Random() {
         </div>
       </div>
 
+      <div className="mt-5">
+        <div className="container mx-auto py-12 px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+            <div className="button">
+              <a href="/practice">
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Button
+                </button>
+              </a>
+            </div>
+
+
+            <div className="button">
+              <a href="/practiceone">
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  Button
+                </button>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
       <br />
       <br />
       <br />
@@ -75,5 +100,3 @@ function Random() {
 }
 
 export default Random;
-
-

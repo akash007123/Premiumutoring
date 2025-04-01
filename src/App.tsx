@@ -8,8 +8,8 @@ import Blog from "./pages/Blog";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact"
 import Random from "./pages/Random"
-
-
+import Practice from "./practice/practice";
+import Practiceone from "./practice/Practiceone";
 
 const App: React.FC = () => {
   return (
@@ -23,6 +23,8 @@ const App: React.FC = () => {
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/random" element={<Random />} />
+        <Route path="/practice" element={<Practice />} />
+        <Route path="/practiceone" element={<Practiceone />} />
       </Routes>
       <Footer />
     </Router>
