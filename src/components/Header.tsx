@@ -11,7 +11,7 @@ function App() {
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <img src="https://www.amplethemes.com/wp-content/uploads/edd/2020/07/5345488-icon-png-logos-208178-free-icons-library-png-logos-1000_979_preview.png" className='w-11' alt="" />
+              <img src="https://cdn-icons-png.flaticon.com/512/5953/5953443.png" className='w-20' alt="" />
               <span className="ml-2 text-xl font-bold text-gray-800">Premium Tutoring</span>
             </div>
             
