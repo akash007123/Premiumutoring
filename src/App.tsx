@@ -8,12 +8,18 @@ import Blog from "./pages/Blog";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact"
 import Random from "./pages/Random"
-import Practice from "./practice/practice";
+import Practice from "./practice/Practice";
 import Practiceone from "./practice/Practiceone";
+import Practicetwo from "./practice/Practicetwo"
+
+// import { ThemeProvider } from "./toggle/ThemeContext";
+// import ThemedSection from "./toggle/ThemedSection";
+// import ThemeToggle from "./toggle/ThemeToggle";
+
 
 const App: React.FC = () => {
   return (
-    <Router>
+      <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -25,9 +31,13 @@ const App: React.FC = () => {
         <Route path="/random" element={<Random />} />
         <Route path="/practice" element={<Practice />} />
         <Route path="/practiceone" element={<Practiceone />} />
+        <Route path="/practiceotwo" element={<Practicetwo />} />
+        {/* <ThemeToggle />
+        <ThemedSection /> */}
       </Routes>
       <Footer />
     </Router>
+    
   );
 };
 
