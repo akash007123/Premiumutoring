@@ -13,7 +13,7 @@ import Practiceone from "./practice/Practiceone";
 import Practicetwo from "./practice/Practicetwo";
 import FaqSection from "./practice/FaqSection";
 import Eventhandling from "./practice/Eventhandling";
-
+import Usestate from "./practice/Usestate";
 
 
 const App: React.FC = () => {
@@ -33,6 +33,7 @@ const App: React.FC = () => {
         <Route path="/practiceotwo" element={<Practicetwo />} />
         <Route path="/faqSection" element={<FaqSection />} />
         <Route path="/eventhandling" element={<Eventhandling />} />
+        <Route path="/usestate" element={<Usestate />} />
       </Routes>
       <Footer />
     </Router>

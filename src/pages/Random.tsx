@@ -48,6 +48,10 @@ function Random() {
       link: "/eventhandling",
       name:"Event Handling"
     },
+    {
+      link: "/usestate",
+      name:"Usestate"
+    },
   ];
 
   return (
