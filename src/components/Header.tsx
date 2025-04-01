@@ -22,6 +22,7 @@ function App() {
               <a href="/service" className="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
               <a href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors">Blogs</a>
               <a href="/testimonials" className="text-gray-600 hover:text-blue-600 transition-colors">Testimonials</a>
+              <a href="/random" className="text-gray-600 hover:text-blue-600 transition-colors">Random User</a>
               <a href="/contact"><button className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors">
                 Contact Us
               </button></a>

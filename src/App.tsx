@@ -7,6 +7,10 @@ import Service from "./pages/Service";
 import Blog from "./pages/Blog";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact"
+import Random from "./pages/Random"
+
+
+
 const App: React.FC = () => {
   return (
     <Router>
@@ -18,6 +22,7 @@ const App: React.FC = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/random" element={<Random />} />
       </Routes>
       <Footer />
     </Router>
