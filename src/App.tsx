@@ -14,7 +14,8 @@ import Practicetwo from "./practice/Practicetwo";
 import FaqSection from "./practice/FaqSection";
 import Eventhandling from "./practice/Eventhandling";
 import Usestate from "./practice/Usestate";
-import Useeffect from "./practice/Useeffect "
+import Useeffect from "./practice/Useeffect ";
+import RecipeSearch from "./practice/RecipeSearch";
 
 
 const App: React.FC = () => {
@@ -36,6 +37,7 @@ const App: React.FC = () => {
         <Route path="/eventhandling" element={<Eventhandling />} />
         <Route path="/usestate" element={<Usestate />} />
         <Route path="/useeffect" element={<Useeffect />} />
+        <Route path="/recipeSearch" element={<RecipeSearch />} />
       </Routes>
       <Footer />
     </Router>
