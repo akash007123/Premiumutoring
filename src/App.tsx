@@ -10,11 +10,10 @@ import Contact from "./pages/Contact"
 import Random from "./pages/Random"
 import Practice from "./practice/Practice";
 import Practiceone from "./practice/Practiceone";
-import Practicetwo from "./practice/Practicetwo"
+import Practicetwo from "./practice/Practicetwo";
+import FaqSection from "./practice/FaqSection";
 
-// import { ThemeProvider } from "./toggle/ThemeContext";
-// import ThemedSection from "./toggle/ThemedSection";
-// import ThemeToggle from "./toggle/ThemeToggle";
+
 
 
 const App: React.FC = () => {
@@ -32,8 +31,7 @@ const App: React.FC = () => {
         <Route path="/practice" element={<Practice />} />
         <Route path="/practiceone" element={<Practiceone />} />
         <Route path="/practiceotwo" element={<Practicetwo />} />
-        {/* <ThemeToggle />
-        <ThemedSection /> */}
+        <Route path="/faqSection" element={<FaqSection />} />
       </Routes>
       <Footer />
     </Router>

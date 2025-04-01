@@ -27,6 +27,25 @@ function Random() {
     },
   ];
 
+  const buttons = [
+    {
+      link: "/practice",
+      name:"Read"
+    },
+    {
+      link: "/practiceone",
+      name:"Write"
+    },
+    {
+      link: "/practiceotwo",
+      name:"Learn"
+    },
+    {
+      link: "/faqSection",
+      name:"Go"
+    },
+  ];
+
   return (
     <>
       <br />
@@ -57,7 +76,7 @@ function Random() {
                   <div className="button mt-5 flex justify-center items-center">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                       Button
-                    </button>{" "}
+                    </button>
                   </div>
                 </div>
               </div>
@@ -68,33 +87,19 @@ function Random() {
 
       <div className="mt-5">
         <div className="container mx-auto py-12 px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
-
-            <div className="button">
-              <a href="/practice">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  Button
-                </button>
-              </a>
-            </div>
-
-
-            <div className="button">
-              <a href="/practiceone">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  Button
-                </button>
-              </a>
-            </div>
-
-            <div className="button">
-              <a href="/practiceotwo">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  Button
-                </button>
-              </a>
-            </div>
-
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {buttons.map((button, index) => (
+              <div
+                key={index}
+                className="mx-auto max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+              >
+                <a href={button.link}>
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+                    {button.name}
+                  </button>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </div>
