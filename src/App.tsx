@@ -16,6 +16,8 @@ import Eventhandling from "./practice/Eventhandling";
 import Usestate from "./practice/Usestate";
 import Useeffect from "./practice/Useeffect ";
 import RecipeSearch from "./practice/RecipeSearch";
+import Design from "./practice/Design";
+import Condition from "./practice/Condition";
 
 
 const App: React.FC = () => {
@@ -38,6 +40,8 @@ const App: React.FC = () => {
         <Route path="/usestate" element={<Usestate />} />
         <Route path="/useeffect" element={<Useeffect />} />
         <Route path="/recipeSearch" element={<RecipeSearch />} />
+        <Route path="/design" element={<Design />} />
+        <Route path="/condition" element={<Condition />} />
       </Routes>
       <Footer />
     </Router>

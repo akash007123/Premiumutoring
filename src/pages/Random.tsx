@@ -60,6 +60,14 @@ function Random() {
       link: "/recipeSearch",
       name:"Recipe Search"
     },
+    {
+      link: "/design",
+      name:"Design and use hook"
+    },
+    {
+      link: "/condition",
+      name:"Conditiontional Rendering"
+    },
   ];
 
   return (
