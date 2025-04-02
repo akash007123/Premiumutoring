@@ -1,32 +1,32 @@
+import React from "react";
 
-type ItemProps = {
-  name: string;
-  isPacked: boolean;
+function Greeting({ isLoggedIn }: { isLoggedIn: boolean }) {
+  return isLoggedIn ? <h1>Welcome! 🎉</h1> : <h1>Please log in. 🔑</h1>;
+}
+
+const App: React.FC = () => {
+  return (
+    <><br /><br /><br /><br /><br />
+    
+   <div className="container py-16 px-6">
+    <div className="grid grid-cols-1 ">
+    <div>
+      <Greeting isLoggedIn={true} />  {/* Output: "Welcome! 🎉" */}
+      <Greeting isLoggedIn={false} />
+      <Greeting isLoggedIn={false} />
+      <Greeting isLoggedIn={true} />
+      <Greeting isLoggedIn={false} />
+      <Greeting isLoggedIn={false} />
+      <Greeting isLoggedIn={true} />
+      <Greeting isLoggedIn={false} />
+      <Greeting isLoggedIn={true} />
+      <Greeting isLoggedIn={false} /> {/* Output: "Please log in. 🔑" */}
+    </div>
+    </div>
+   </div>
+    
+    <br /><br /><br /><br /><br /></>
+  );
 };
 
-function Item({ name, isPacked }: ItemProps) {
-  let itemContent = name;
-  if (isPacked) {
-    itemContent = name + " ✅";
-  }
-  return <li className="item">{itemContent}</li>;
-}
-
-export default function PackingList() {
-  return (
-   <>
-   <br /><br /><br /><br /><br />
-   
-   <section>
-      <h1 className="font-bold text-2xl">Sally Ride's Packing List (Conditional Rendering)</h1>
-      <ul>
-        <Item isPacked={true} name="Space suit" />
-        <Item isPacked={true} name="Helmet with a golden leaf" />
-        <Item isPacked={true} name="Photo of Tam" />
-      </ul>
-    </section>
-   
-   <br /><br /><br /><br /><br />
-   </>
-  );
-}
+export default App;

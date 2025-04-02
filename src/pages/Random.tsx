@@ -68,6 +68,10 @@ function Random() {
       link: "/condition",
       name:"Conditiontional Rendering"
     },
+    {
+      link: "/form",
+      name:"Form "
+    },
   ];
 
   return (
