@@ -28,7 +28,7 @@ function CompleteForm() {
     return `ID-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
     setLoading(true);
     setMessage("");
@@ -36,7 +36,7 @@ function CompleteForm() {
     const submittedData = { id: generateUniqueId(), ...formData };
 
     try {
-      const response = await fetch("https://reqres.in/api/users/submit-form", {
+      const response = await fetch("http://localhost:5000/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

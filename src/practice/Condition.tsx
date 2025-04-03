@@ -16,7 +16,7 @@ const App: React.FC = () => {
   };
 
   return (
-   <><br /><br /><br /><br /><br />
+   <><br /><br /><br /><br /><br /><br />
    
    <div className="container py-16 mx-auto text-center">
     <p className="text-2xl font-bold">Conditions Apply</p>

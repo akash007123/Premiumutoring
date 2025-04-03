@@ -7,6 +7,7 @@ interface CounterState {
 class Counter extends Component<{}, CounterState> {
   constructor(props: {}) {
     super(props);
+    console.log("Props received:", props);
     this.state = { count: 0 };
   }
 
@@ -20,6 +21,8 @@ class Counter extends Component<{}, CounterState> {
 
   render() {
     return (
+      <>
+      <br /><br /><br /><br /><br /><br /><br />
       <div className="container py-16 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
           <div className="flex flex-col bg-gray-100 p-4 rounded-lg">
@@ -43,6 +46,8 @@ class Counter extends Component<{}, CounterState> {
           
         </div>
       </div>
+      
+      </>
     );
   }
 }
