@@ -19,6 +19,7 @@ import RecipeSearch from "./practice/RecipeSearch";
 import Design from "./practice/Design";
 import Condition from "./practice/Condition";
 import Form from "./practice/Form"
+import ListKey from "./practice/ListKey"
 
 
 const App: React.FC = () => {
@@ -44,6 +45,7 @@ const App: React.FC = () => {
         <Route path="/design" element={<Design />} />
         <Route path="/condition" element={<Condition />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/list" element={<ListKey />} />
       </Routes>
       <Footer />
     </Router>

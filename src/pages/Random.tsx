@@ -72,6 +72,10 @@ function Random() {
       link: "/form",
       name:"Form "
     },
+    {
+      link: "/list",
+      name:"List and key"
+    },
   ];
 
   return (
