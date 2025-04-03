@@ -5,6 +5,8 @@ function MarksheetForm() {
   const [students, setStudents] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
+    image: "",
+    imagePreview: "",
     rollNumber: "",
     college: "Prashanti College of Engineering",
     course: "",
@@ -21,8 +23,18 @@ function MarksheetForm() {
   const handleChange = (e, index = null) => {
     if (index !== null) {
       const updatedSubjects = [...formData.subjects];
-      updatedSubjects[index].marks = e.target.value;
+      let marksValue = e.target.value;
+      if (marksValue < 0) marksValue = 0;
+      if (marksValue > 100) marksValue = 100;
+
+      updatedSubjects[index].marks = marksValue;
       setFormData({ ...formData, subjects: updatedSubjects });
+    } else if (e.target.name === "image") {
+      const file = e.target.files[0];
+      if (file) {
+        const imageUrl = URL.createObjectURL(file);
+        setFormData({ ...formData, image: file, imagePreview: imageUrl });
+      }
     } else {
       setFormData({ ...formData, [e.target.name]: e.target.value });
     }
@@ -33,6 +45,8 @@ function MarksheetForm() {
     setStudents([...students, formData]);
     setFormData({
       name: "",
+      image: "",
+      imagePreview: "",
       rollNumber: "",
       college: "Prashanti College of Engineering",
       course: "",
@@ -69,6 +83,21 @@ function MarksheetForm() {
           onSubmit={handleSubmit}
           className="max-w-lg mx-auto bg-white shadow-md p-6 mt-5 rounded"
         >
+          <input
+            type="file"
+            accept="image/*"
+            name="image"
+            className="w-full p-2 mb-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600"
+            onChange={handleChange}
+            required
+          />
+          {formData.imagePreview && (
+            <img
+              src={formData.imagePreview}
+              alt="Student"
+              className="w-20 h-20 rounded-full mx-auto my-2 border"
+            />
+          )}
           <div className="flex gap-4">
             <input
               name="name"
@@ -111,6 +140,8 @@ function MarksheetForm() {
               <p className="w-2/3">{subject.name}</p>
               <input
                 type="number"
+                min="0"
+                max="100"
                 value={subject.marks}
                 onChange={(e) => handleChange(e, index)}
                 placeholder="Marks"
@@ -146,7 +177,14 @@ function MarksheetForm() {
                   College Marksheet
                 </h1>
                 <p className="text-gray-600 text-center">{student.college}</p>
-                <div className="mt-4">
+                <div className="mt-4 text-center">
+                  {student.imagePreview && (
+                    <img
+                      src={student.imagePreview}
+                      alt="Student"
+                      className="w-20 h-20 rounded-full mx-auto my-2 border"
+                    />
+                  )}
                   <p>
                     <strong>Name:</strong> {student.name}
                   </p>
@@ -187,7 +225,7 @@ function MarksheetForm() {
                     <strong>Percentage:</strong> {percentage.toFixed(2)}%
                   </p>
                   <p>
-                    <strong>Grade:</strong>{" "}
+                    <strong>Grade:</strong>
                     <span className="text-blue-600 text-xl">{grade}</span>
                   </p>
                 </div>
