@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -70,38 +69,42 @@ function MarksheetForm() {
           onSubmit={handleSubmit}
           className="max-w-lg mx-auto bg-white shadow-md p-6 mt-5 rounded"
         >
-          <input
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Student Name"
-            className="w-full p-2 mb-2 border rounded"
-            required
-          />
-          <input
-            name="rollNumber"
-            value={formData.rollNumber}
-            onChange={handleChange}
-            placeholder="Roll Number"
-            className="w-full p-2 mb-2 border rounded"
-            required
-          />
-          <input
-            name="course"
-            value={formData.course}
-            onChange={handleChange}
-            placeholder="Course"
-            className="w-full p-2 mb-2 border rounded"
-            required
-          />
-          <input
-            name="semester"
-            value={formData.semester}
-            onChange={handleChange}
-            placeholder="Semester"
-            className="w-full p-2 mb-2 border rounded"
-            required
-          />
+          <div className="flex gap-4">
+            <input
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Student Name"
+              className="w-full p-2 mb-2 border rounded"
+              required
+            />
+            <input
+              name="rollNumber"
+              value={formData.rollNumber}
+              onChange={handleChange}
+              placeholder="Roll Number"
+              className="w-full p-2 mb-2 border rounded"
+              required
+            />
+          </div>
+          <div className="flex gap-4">
+            <input
+              name="course"
+              value={formData.course}
+              onChange={handleChange}
+              placeholder="Course"
+              className="w-full p-2 mb-2 border rounded"
+              required
+            />
+            <input
+              name="semester"
+              value={formData.semester}
+              onChange={handleChange}
+              placeholder="Semester"
+              className="w-full p-2 mb-2 border rounded"
+              required
+            />
+          </div>
           <h3 className="text-lg font-bold mt-4">Subjects & Marks</h3>
           {formData.subjects.map((subject, index) => (
             <div key={index} className="flex justify-between items-center">
@@ -123,7 +126,7 @@ function MarksheetForm() {
             Generate Marksheet
           </button>
         </form>
-        {/* Marksheet Display */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {students.map((student, index) => {
             const totalMarks = calculateTotalMarks(student.subjects);
@@ -193,8 +196,6 @@ function MarksheetForm() {
           })}
         </div>
       </div>
-
-      
     </>
   );
 }

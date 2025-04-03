@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import Marksheet from "./Marksheet"
 
 function ListKey() {
+ 
+
   const data = [
     {
       Images:
@@ -222,53 +225,7 @@ function ListKey() {
     },
   ];
 
-  const studentData = {
-    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC4akwUFlBO78CRiGvtomLs6kPWFH173_3hQ&s",
-    name: "Rahul Sharma",
-    rollNumber: "0715CE101001",
-    college: "Prashanti College of Engineering",
-    course: "Civil Engineering",
-    semester: "5th Semester",
-    subjects: [
-      { name: "Mathematics I", marks: 62 },
-      { name: "Chemistry", marks: 60},
-      { name: "Communication Skills", marks: 58 },
-      { name: "Engineering Graphics", marks: 66 },
-      { name: "Basic Elctrical & Electronics Engineering", marks: 54 },
-    ],
-  };
 
-  
-
-  const calculateTotalMarks = (
-    subjects: { name: string; marks: number }[]
-  ): number => {
-    return subjects.reduce((total, subject) => total + subject.marks, 0);
-  };
-
-  const calculatePercentage = (
-    totalMarks: number,
-    totalSubjects: number
-  ): number => {
-    return (totalMarks / (totalSubjects * 100)) * 100;
-  };
-
-  const getGrade = (percentage: number): string => {
-    if (percentage >= 90) return "A+";
-    if (percentage >= 80) return "A";
-    if (percentage >= 70) return "B";
-    if (percentage >= 60) return "C";
-    return "D";
-  };
-
-  const totalMarks = calculateTotalMarks(studentData.subjects);
-  const percentage = calculatePercentage(
-    totalMarks,
-    studentData.subjects.length
-  );
-  const grade = getGrade(percentage);
-
-  
 
   return (
     <>
@@ -428,75 +385,8 @@ function ListKey() {
       </div>
 
 
-
-{/* Marksheet */}
-      <div className="container mx-auto py-16 px-6 mt-10 max-w-10xl">
-        <div className="grid gid-cols-1 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-6">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="bg-white shadow-xl rounded-lg p-6 border border-gray-300"
-        >
-            <div className="flex items-center justify-center">
-            <img src={studentData.image} className="w-16" alt="" />
-            </div>
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-blue-700">
-              College Marksheet
-            </h1>
-            <p className="text-gray-600">{studentData.college}</p>
-            <p className="text-gray-500">{studentData.semester}</p>
-          </div>
-
-          <div className="mt-6 border-t border-gray-300 pt-4">
-            <p className="text-lg font-semibold">
-              Name: <span className="text-gray-700">{studentData.name}</span>
-            </p>
-            <p className="text-lg font-semibold">
-              Roll Number:{" "}
-              <span className="text-gray-700">{studentData.rollNumber}</span>
-            </p>
-            <p className="text-lg font-semibold">
-              Course:{" "}
-              <span className="text-gray-700">{studentData.course}</span>
-            </p>
-          </div>
-
-          <table className="w-full mt-6 border border-gray-300">
-            <thead>
-              <tr className="bg-blue-600 text-white">
-                <th className="py-2 px-4">Subject</th>
-                <th className="py-2 px-4">Marks</th>
-              </tr>
-            </thead>
-            <tbody>
-              {studentData.subjects.map((subject, index) => (
-                <tr key={index} className="border-b">
-                  <td className="py-2 px-4 text-gray-700">{subject.name}</td>
-                  <td className="py-2 px-4 font-semibold">{subject.marks}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-
-          <div className="mt-6 border-t border-gray-300 pt-4 text-center">
-            <p className="text-lg font-semibold">
-              Total Marks:{" "}
-              <span className="text-gray-700">
-                {totalMarks} / {studentData.subjects.length * 100}
-              </span>
-            </p>
-            <p className="text-lg font-semibold">
-              Percentage:{" "}
-              <span className="text-gray-700">{percentage.toFixed(2)}%</span>
-            </p>
-            <p className="text-lg font-semibold">
-              Grade: <span className="text-blue-600 text-xl">{grade}</span>
-            </p>
-          </div>
-        </motion.div>
-        </div>
-      </div>
+      {/* Marksheet */}
+          <Marksheet/>
     </>
   );
 }
