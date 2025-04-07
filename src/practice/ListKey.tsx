@@ -141,7 +141,7 @@ function ListKey() {
         "Cross-skilling: How to maintain government efficiency amidst change",
       Description:
         "While federal policies strive for government efficiency, keeping up can be a challenge. The solution to staying agile? Cross-skilling your..",
-      Link: "https://www.pluralsight.com/resources/blog/upskilling/cross-skilling-government-efficiency",
+      Link: "/blogonAI",
       Badge: "Government",
     },
     {
@@ -150,7 +150,7 @@ function ListKey() {
       Title: "Why continuous feedback is vital for DevOps workflow success.",
       Description:
         "Software development success relies on continuous feedback being integrated into your DevOps process to boost quality, speed deployment, and drive improvement.",
-      Link: "https://www.pluralsight.com/resources/blog/tech-operations/continuous-feedback-devops-process",
+      Link: "/blogspot",
       Badge: "DevOps",
     },
     {
