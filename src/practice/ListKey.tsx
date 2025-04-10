@@ -159,7 +159,7 @@ function ListKey() {
       Title: "DevOps Flow of Work: How to Streamline Software Development",
       Description:
         "Improve software delivery with an optimized DevOps Flow of Work. Learn how CI/CD, version control, and automation streamline development ...",
-      Link: "https://www.pluralsight.com/resources/blog/tech-operations/develops-workflow-overview",
+      Link: "/blogonfreecode",
       Badge: "Software Development",
     },
     {

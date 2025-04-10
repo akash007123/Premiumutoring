@@ -76,6 +76,14 @@ function Random() {
       link: "/list",
       name:"List and key"
     },
+    {
+      link: "/React-Optimization",
+      name:"React Optimization"
+    },
+    {
+      link: "reactredux",
+      name:"React Redux Store"
+    },
   ];
 
   return (
@@ -126,7 +134,7 @@ function Random() {
                 className="mx-auto max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
               >
                 <a href={button.link}>
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+                  <button className="animate-pulse bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
                     {button.name}
                   </button>
                 </a>

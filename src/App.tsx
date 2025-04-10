@@ -22,6 +22,9 @@ import Form from "./practice/Form"
 import ListKey from "./practice/ListKey"
 import Blogspot from "./Blog/Blogspot";
 import BlogonAI from "./Blog/BlogonAI";
+import Blogonfreecode from "./Blog/Blogonfreecode";
+import Optimization from "./practice/Optimization";
+// import Reduxp from "./practice/reduxp";
 
 
 const App: React.FC = () => {
@@ -51,6 +54,8 @@ const App: React.FC = () => {
         <Route path="/list" element={<Blog />} />
         <Route path="/blogspot" element={<Blogspot />} />
         <Route path="/blogonAI" element={<BlogonAI />} />
+        <Route path="/React-Optimization" element={<Optimization />} />
+        <Route path="blogonfreecode" element={<Blogonfreecode />} />
       </Routes>
       <Footer />
     </Router>
